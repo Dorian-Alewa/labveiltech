@@ -14,7 +14,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     
-    <atom:link href="http://localhost:1313/subdir/index.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://dorian-alewa.github.io/labveiltech/index.xml" rel="self" type="application/rss+xml"/>
     
     
     <description>Paige Master</description>
@@ -22,7 +22,7 @@
     <language>en</language>
     
     
-    <link>http://localhost:1313/subdir/</link>
+    <link>https://dorian-alewa.github.io/labveiltech/</link>
     
     
     <title>Paige Master</title>
@@ -38,8 +38,8 @@
 ]]></description>
       
       
-      <guid>http://localhost:1313/subdir/_index-copy/</guid>
-      <link>http://localhost:1313/subdir/_index-copy/</link>
+      <guid>https://dorian-alewa.github.io/labveiltech/_index-copy/</guid>
+      <link>https://dorian-alewa.github.io/labveiltech/_index-copy/</link>
       
       
       

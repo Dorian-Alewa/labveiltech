@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/subdir/</loc>
+    <loc>https://dorian-alewa.github.io/labveiltech/</loc>
   </url><url>
-    <loc>http://localhost:1313/subdir/categories/</loc>
+    <loc>https://dorian-alewa.github.io/labveiltech/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/subdir/_index-copy/</loc>
+    <loc>https://dorian-alewa.github.io/labveiltech/_index-copy/</loc>
   </url><url>
-    <loc>http://localhost:1313/subdir/series/</loc>
+    <loc>https://dorian-alewa.github.io/labveiltech/series/</loc>
   </url><url>
-    <loc>http://localhost:1313/subdir/tags/</loc>
+    <loc>https://dorian-alewa.github.io/labveiltech/tags/</loc>
   </url>
 </urlset>

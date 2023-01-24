@@ -12,7 +12,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     
-    <atom:link href="http://localhost:1313/subdir/tags/index.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://dorian-alewa.github.io/labveiltech/tags/index.xml" rel="self" type="application/rss+xml"/>
     
     
     <description>Tags · Paige Master</description>
@@ -20,7 +20,7 @@
     <language>en</language>
     
     
-    <link>http://localhost:1313/subdir/tags/</link>
+    <link>https://dorian-alewa.github.io/labveiltech/tags/</link>
     
     
     <title>Tags · Paige Master</title>
