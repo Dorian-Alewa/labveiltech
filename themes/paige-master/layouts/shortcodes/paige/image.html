@@ -1,0 +1,21 @@
+{{ $alt := .Get "alt" }}
+{{ $caption := .Get "caption" }}
+{{ $height := .Get "height" }}
+{{ $link := .Get "link" }}
+{{ $method := .Get "method" }}
+{{ $options := .Get "options" }}
+{{ $src := .Get 0 | default (.Get "src") }}
+{{ $title := .Get "title" }}
+{{ $width := .Get "width" }}
+
+{{ partial "paige/image-figure.html" (dict
+    "alt" $alt
+    "caption" $caption
+    "height" $height
+    "link" $link
+    "method" $method
+    "options" $options
+    "src" $src
+    "title" $title
+    "width" $width
+) }}

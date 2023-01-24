@@ -1,0 +1,8 @@
+{{ $caption := .Get 0 | default (.Get "caption") }}
+
+{{ $content := .Inner }}
+
+{{ partial "paige/figure.html" (dict
+    "caption" $caption
+    "content" $content
+) }}

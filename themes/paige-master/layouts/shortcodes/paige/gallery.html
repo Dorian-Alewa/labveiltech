@@ -1,0 +1,89 @@
+{{ $align := .Get "align" | default "center" }}
+{{ $caption := .Get "caption" }}
+{{ $height := .Get "height" }}
+{{ $image := .Get "image" }}
+{{ $images := .Get 0 | default (.Get "images") }}
+{{ $justify := .Get "justify" | default "center" }}
+{{ $method := .Get "method" | default "resize" }}
+{{ $options := .Get "options" | default "550x webp picture Lanczos" }}
+{{ $type := .Get "type" | default "rows" }}
+{{ $width := .Get "width" }}
+
+{{ if $image }}
+    {{ $resource := partial "paige/func-resource.html" (dict
+        "page" .Page
+        "url" $image
+    ) }}
+
+    {{ partial "paige/image-figure.html" (dict
+        "caption" $caption
+        "link" $resource.RelPermalink
+        "method" $method
+        "options" $options
+        "page" .Page
+        "resource" $resource
+        "src" $image
+        "table" true
+    ) }}
+{{ else }}
+    {{ $inner := chomp .Inner }}
+
+    {{ $resources := slice }}
+    {{ with $images }}
+        {{ with $.Page.Resources.Match . }}
+            {{ $resources = . }}
+        {{ else }}
+            {{ $resources = resources.Match . }}
+        {{ end }}
+    {{ else }}
+        {{ with .Page.Resources.ByType "image" }}
+            {{ $resources = . }}
+        {{ else }}
+            {{ $resources = resources.ByType "image" }}
+        {{ end }}
+    {{ end }}
+
+    <figure>
+        {{ if eq $type "grid" }}
+            <div class="container-fluid{{ if $caption }} figure-img{{ end }} px-0">
+                <div class="align-items-{{ $align }} gx-3 gy-3 justify-content-{{ $justify }} row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xxl-6">
+                    {{ with $inner }}
+                        {{ . }}
+                    {{ else }}
+                        {{ range $resources }}
+                            {{ partial "paige/image-figure.html" (dict
+                                "link" .RelPermalink
+                                "method" $method
+                                "options" $options
+                                "resource" .
+                                "table" true
+                            ) }}
+                        {{ end }}
+                    {{ end }}
+                </div>
+            </div>
+        {{ else if eq $type "rows" }}
+            <div class="align-items-{{ $align }} column-gap-3 d-flex{{ with $caption }} figure-img{{ end }} flex-wrap justify-content-{{ $justify }} row-gap-3">
+                {{ with $inner }}
+                    {{ . }}
+                {{ else }}
+                    {{ range $resources }}
+                        {{ partial "paige/image-figure.html" (dict
+                            "height" "10rem"
+                            "link" .RelPermalink
+                            "method" $method
+                            "options" $options
+                            "resource" .
+                            "table" true
+                        ) }}
+                    {{ end }}
+                {{ end }}
+            </div>
+        {{ else }}
+            {{ errorf "invalid type: %q" $type }}
+        {{ end }}
+        {{ with $caption }}
+            <figcaption class="figure-caption text-center">{{ . }}</figcaption>
+        {{ end }}
+    </figure>
+{{ end }}
