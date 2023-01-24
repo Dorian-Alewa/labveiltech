@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    
+    <atom:link href="http://localhost:1313/subdir/index.xml" rel="self" type="application/rss+xml"/>
+    
+    
+    <description>Paige Master</description>
+    
+    <language>en</language>
+    
+    
+    <link>http://localhost:1313/subdir/</link>
+    
+    
+    <title>Paige Master</title>
+    
+    
+    
+    <item>
+      
+      
+      <description><![CDATA[<p class="lead text-center">
+<a href="https://github.com/willfaught/paige">Paige: A simple Hugo theme</a>
+</p>
+]]></description>
+      
+      
+      <guid>http://localhost:1313/subdir/_index-copy/</guid>
+      <link>http://localhost:1313/subdir/_index-copy/</link>
+      
+      
+      
+      <title>No Borders, No Limits</title>
+      
+    </item>
+    
+  </channel>
+</rss>
